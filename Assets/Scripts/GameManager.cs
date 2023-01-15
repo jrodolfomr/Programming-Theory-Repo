@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void SaveHiScore(int HiScore)
     {
-        if(Name!= null)
+        if(Name== "")
         {
             Name = "testname";
         }
