@@ -35,27 +35,30 @@ public class UserInput : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Vector2 move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-        GameCamera.transform.position = GameCamera.transform.position + PanSpeed * Time.deltaTime * new Vector3(move.y, 0, -move.x);
-        Transform t = GameCamera.transform;
-        Vector2 adjust;
-        adjust.y = Mathf.Clamp(t.position.x, minCameraHorizontal, maxCameraHorizontal);
-        adjust.x = Mathf.Clamp(t.position.z, minCameraVertical, maxCameraVertical);
-
-        GameCamera.transform.position = new Vector3(adjust.y, t.position.y, adjust.x);
-
-        if (Input.GetMouseButtonDown(0))
+        if (GameManager.Instance.isPlaying)
         {
-            if (SelectEnemy(out Enemy enemy))
-                if (enemy.Health > 0)
-                    enemy.TakeDamage(1);
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            if (SelectEnemy(out Enemy enemy))
-                if (enemy.Health > 0)
-                    enemy.SetText();
+            Vector2 move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+            GameCamera.transform.position = GameCamera.transform.position + PanSpeed * Time.deltaTime * new Vector3(move.y, 0, -move.x);
+            Transform t = GameCamera.transform;
+            Vector2 adjust;
+            adjust.y = Mathf.Clamp(t.position.x, minCameraHorizontal, maxCameraHorizontal);
+            adjust.x = Mathf.Clamp(t.position.z, minCameraVertical, maxCameraVertical);
+
+            GameCamera.transform.position = new Vector3(adjust.y, t.position.y, adjust.x);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (SelectEnemy(out Enemy enemy))
+                    if (enemy.Health > 0)
+                        enemy.TakeDamage(1);
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                if (SelectEnemy(out Enemy enemy))
+                    if (enemy.Health > 0)
+                        enemy.SetText();
+            } 
         }
     }
 }

@@ -8,6 +8,8 @@ public class MenuHandler : MonoBehaviour
 
     public void LoadMenuScene()
     {
+        GameManager.Instance.Name = "boyo";
+         
         SceneManager.LoadScene(1);
     }
 }

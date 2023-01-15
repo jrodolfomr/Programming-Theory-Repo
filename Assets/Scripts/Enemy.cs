@@ -103,6 +103,7 @@ public class Enemy : MonoBehaviour
         healthText.text = "";
         Destroy(gameObject);
        spawner.CheckEnemyCount();
+        spawner.CalculatePoints(Attack);
     }
 
     public IEnumerator TextSwitcher()
@@ -110,6 +111,20 @@ public class Enemy : MonoBehaviour
         SetText();
         yield return new WaitForSeconds(2); // wait
         healthText.text = "";
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Collider"))
+        {
+            Debug.Log("Triggered by Collider");
+            spawner.SetGameOver();
+        }
+        if (other.CompareTag("OutOfBound"))
+        {
+            Debug.Log("Triggered by OutOfBound");
+            StartCoroutine(TextDestroy());
+        }
     }
 }
 
