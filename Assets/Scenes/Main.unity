@@ -1054,8 +1054,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 40, y: 80, z: 20}
-  m_Center: {x: 0, y: 40, z: 70}
+  m_Size: {x: 40, y: 20, z: 20}
+  m_Center: {x: 0, y: 10, z: 70}
 --- !u!1001 &84391403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6063,7 +6063,6 @@ GameObject:
   m_Component:
   - component: {fileID: 649496031}
   - component: {fileID: 649496033}
-  - component: {fileID: 649496032}
   m_Layer: 0
   m_Name: Collider U
   m_TagString: OutOfBound
@@ -6085,18 +6084,6 @@ Transform:
   m_Father: {fileID: 1483601898}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &649496032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649496030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b50daf8edeb82ef41b21bc8e32cc1005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &649496033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6108,8 +6095,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 60, y: 80, z: 200}
-  m_Center: {x: 0, y: 80, z: 0}
+  m_Size: {x: 60, y: 20, z: 200}
+  m_Center: {x: 0, y: 30, z: 0}
 --- !u!4 &658115385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8607349714481317395, guid: 9ba6eae4982ef964c8e57fb50c397eb2, type: 3}
@@ -7963,8 +7950,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 40, y: 80, z: 20}
-  m_Center: {x: 0, y: 40, z: -70}
+  m_Size: {x: 40, y: 20, z: 20}
+  m_Center: {x: 0, y: 10, z: -70}
 --- !u!1001 &846959217
 PrefabInstance:
   m_ObjectHideFlags: 0
