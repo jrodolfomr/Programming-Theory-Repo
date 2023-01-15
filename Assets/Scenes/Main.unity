@@ -1022,7 +1022,6 @@ GameObject:
   m_Component:
   - component: {fileID: 84385750}
   - component: {fileID: 84385752}
-  - component: {fileID: 84385751}
   m_Layer: 0
   m_Name: Collider L
   m_TagString: Collider
@@ -1044,18 +1043,6 @@ Transform:
   m_Father: {fileID: 1483601898}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &84385751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84385749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b50daf8edeb82ef41b21bc8e32cc1005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &84385752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7944,7 +7931,6 @@ GameObject:
   m_Component:
   - component: {fileID: 839897338}
   - component: {fileID: 839897339}
-  - component: {fileID: 839897340}
   m_Layer: 0
   m_Name: Collider R
   m_TagString: Collider
@@ -7979,18 +7965,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 40, y: 80, z: 20}
   m_Center: {x: 0, y: 40, z: -70}
---- !u!114 &839897340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839897337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b50daf8edeb82ef41b21bc8e32cc1005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &846959217
 PrefabInstance:
   m_ObjectHideFlags: 0
