@@ -8,18 +8,19 @@ public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float EnemySpeedRate = 1f;
+    public float EnemySpeedRate = 1.25f;
     public List<Enemy> enemies = new List<Enemy>();
     public int enemyCount = 0;
-
+    public float EnemySpeed = 1f;
     private int hiscore;
     public Text ScoreText;
     public Text BestScoreText;
+    public Text LevelText;
     public GameObject resetButton;
     public GameObject backButton;
     private string text = "";
     private int m_Points;
-
+    private int m_level;
     void Start()
     {
         if (GameManager.Instance != null)
@@ -33,10 +34,14 @@ public class Spawner : MonoBehaviour
                 BestScoreText.text = "";
         }
         GameManager.Instance.isPlaying = true;
-        spawnEnemies();
+
+         LevelText.text = "Level 1";
+         spawnEnemies();
     }
     public void spawnEnemies()
     {
+        m_level += 1;
+        LevelText.text = $"Level {m_level}";
         for (var i = 0; i < 10; i++)
         {
             int selected = Random.Range(0, 3);
@@ -51,7 +56,7 @@ public class Spawner : MonoBehaviour
             g.MaxHealth = g.Health;
             g.Attack = Random.Range(1, 10);
             g.Defense = Random.Range(1, 10);
-            g.Speed = EnemySpeedRate;
+            g.Speed = EnemySpeed;
             g.spawner = this;
         }
 
@@ -82,7 +87,7 @@ public class Spawner : MonoBehaviour
         enemyCount -= 1;
         if (enemyCount == 0)
         {
-           EnemySpeedRate *= 1.25f;
+           EnemySpeed *= EnemySpeedRate;
            spawnEnemies();
 
         }

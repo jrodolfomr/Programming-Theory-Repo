@@ -29,13 +29,17 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-       
+        
     }
     //ABSTRACTION
 
 
     public void SaveHiScore(int HiScore)
     {
+        if(Name!= null)
+        {
+            Name = "testname";
+        }
         HighScoreData data = new HighScoreData
         {
             Name = Name,
