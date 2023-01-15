@@ -26,7 +26,6 @@ public class Spawner : MonoBehaviour
         if (GameManager.Instance != null)
         {
             text = GameManager.Instance.Name;
-
             GameManager.Instance.LoadHiScore(out hiscore, out string name);
             if (hiscore > 0)
                 BestScoreText.text = $"Best Score : {name}: {hiscore}";
@@ -63,16 +62,16 @@ public class Spawner : MonoBehaviour
     }
     public void SetGameOver()
     {
-        GameManager.Instance.isPlaying = false;
+     
         resetButton.SetActive(true);
         backButton.SetActive(true);
-        if (GameManager.Instance != null)
+        if (GameManager.Instance != null && GameManager.Instance.isPlaying)
         {
             if (m_Points > hiscore)
             GameManager.Instance.SaveHiScore(m_Points);
         }
+        GameManager.Instance.isPlaying = false;
 
-        
     }
     public void ResetGame()
     {
