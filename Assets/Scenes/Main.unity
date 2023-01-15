@@ -5363,7 +5363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a672e11408a8f4bbc33089418f61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySpeedRate: 7
+  EnemySpeedRate: 1.25
   enemies:
   - {fileID: 106419131198924869, guid: 04e221cc6e696ca4a8c50f40dc23d3fc, type: 3}
   - {fileID: 3634703000499483911, guid: 5d7826517e45b1f44bd69c82c77e9c07, type: 3}
