@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2372639968831672595}
   m_Layer: 0
   m_Name: Marine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,9 @@ MonoBehaviour:
   - Mermaid
   - Swordfish
   - Serpent
-  selectedObject: {fileID: 0}
+  onPlayerDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &2372639968831672595
 Rigidbody:
   m_ObjectHideFlags: 0

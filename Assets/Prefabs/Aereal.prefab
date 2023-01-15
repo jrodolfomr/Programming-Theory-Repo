@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8414714288561774802}
   m_Layer: 0
   m_Name: Aereal
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,6 +403,9 @@ MonoBehaviour:
   - Crow
   - Pidgeon
   - Drone
+  onPlayerDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &8414714288561774802
 Rigidbody:
   m_ObjectHideFlags: 0

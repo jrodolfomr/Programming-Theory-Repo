@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 6296622857661047808}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,6 +213,9 @@ MonoBehaviour:
   - Walker
   - Doggo
   - Worm
+  onPlayerDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &6296622857661047808
 Rigidbody:
   m_ObjectHideFlags: 0
